@@ -2,9 +2,6 @@
 .idea
 *.iml
 
-# Let us ignore backup files
-*~
-
 # Using a Mac means
 .DS_Store
 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Test React</title>
+
+<meta charset="ISO-8859-1">
+
+<!-- Load React API -->
+<script src= "https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<!-- Load React DOM-->
+<script src= "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<!-- Load Babel Compiler -->
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+<body>
+
+<div id="id01">Hello World!</div>
+
+<table>
+    <tr>
+        <td>a</td>
+        <td id="b">b</td>
+        <td>c</td>
+    </tr>
+</table>
+
+<div id="ts"></div>
+
+<div id="r1"/>
+<script type="text/babel">
+    const name = 'John Doe';
+    const element = <h1>Hello React and {name}!</h1>;
+
+    ReactDOM.render(element, document.getElementById('id01'));
+    //  JSX Babel code goes here
+    ReactDOM.render(<em>Ja</em>, document.getElementById('b'));
+
+    function ticker() {
+        const element = <h1>{new Date().toISOString()}</h1>;
+        ReactDOM.render(element, document.getElementById('ts'));
+    }
+
+    ticker();
+    setInterval(ticker, 1000);
+
+    function Welcome() {
+        return <h1>Hello React!</h1>;
+    }
+
+    ReactDOM.render(<Welcome />, document.getElementById('r1'));
+</script>
+
+</body>
+</html> 
