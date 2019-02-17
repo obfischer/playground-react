@@ -1,0 +1,8 @@
+# Let us ignore the Intellij Stuff
+.idea
+*.iml
+
+# Using a Mac means
+.DS_Store
+
+
